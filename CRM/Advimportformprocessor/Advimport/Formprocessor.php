@@ -8,6 +8,9 @@ class CRM_Advimportformprocessor_Advimport_Formprocessor extends CRM_Advimport_H
    * Available fields.
    */
   function getMapping(&$form) {
+    if (is_null($form)) {
+      return [];
+    }
     $map = [];
 
     // QuickForm weirdness: this gets called before setDefaults
