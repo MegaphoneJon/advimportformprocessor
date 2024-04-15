@@ -27,7 +27,7 @@ class CRM_Advimportformprocessor_Advimport_Formprocessor extends CRM_Advimport_H
 
       $fields = civicrm_api3('FormProcessorInput', 'get', [
         'sequential' => 1,
-        'form_processor_instance_id' => $formProcessorInstanceId,
+        'form_processor_id' => $formProcessorInstanceId,
       ])['values'];
 
       foreach ($fields as $val) {
@@ -121,7 +121,7 @@ class CRM_Advimportformprocessor_Advimport_Formprocessor extends CRM_Advimport_H
     // Check for mandatory fields
     $fields = civicrm_api3('FormProcessorInput', 'get', [
       'sequential' => 1,
-      'form_processor_instance_id' => $formProcessorInstanceId,
+      'form_processor_id' => $formProcessorInstanceId,
     ])['values'];
 
     foreach ($fields as $key => $val) {
